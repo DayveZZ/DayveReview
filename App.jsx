@@ -103,7 +103,7 @@ export default function App() {
           setError("");
         } catch (err) {
           if (err.name !== "AbortError") {
-            console.log(err.message);
+            // console.log(err.message);
             setError(err.message);
           }
         } finally {
@@ -310,6 +310,8 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
+  /* Eslint-disable */
+
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
@@ -364,7 +366,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
       document.title = `Movie | ${title}`;
 
       return function () {
-        document.title = "usePopcorn";
+        document.title = "DayveREIVIEW";
         // console.log(`Clean up effect for movie ${title}`);
       };
     },
